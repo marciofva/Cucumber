@@ -12,7 +12,7 @@ public class NavBarMenu {
 	
 	By register_menu = By.cssSelector(".nav.navbar-nav.navbar-right>li>a[href='/users/sign_up']");
 	
-	
+
 	public NavBarMenu(){
 		
 	}
