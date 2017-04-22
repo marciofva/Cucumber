@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions (
 		plugin = {"html:target/cucumberHtmlReport", "json:target/cucumber-report.json"},
 		features = "features",glue={"com.steps"},
-		tags = {"@CreateNewTask, @CreateSubTask"}
+		tags = {"@CreateNewTask, @CreateSubTask1"}
 		)
 public class runnerTask {
 

@@ -3,6 +3,7 @@ package com.pageObjects;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import com.navBar.Menu.NavBarMenu;
 
 public class AccountPage extends AbstractPageDriver{
@@ -21,17 +22,18 @@ public class AccountPage extends AbstractPageDriver{
 		NavBarMenu navBar = new NavBarMenu();
 		boolean found = false;
 		
-		switch (elementName) {
-		case "My Tasks link":
+		
+		if(elementName.equals("My Tasks link")){
 			found = isElementVisible(navBar.getMytasks_menu());
-			break;
-		case "My Tasks button":
-			found = isElementVisible(myTasks_btn);
-			break;
-		default:
-			Assert.assertTrue("Element: '" + elementName + " not found", false);
-			break;
+		} else{
+			if (elementName.equals("My Tasks button")){
+				found = isElementVisible(myTasks_btn);
+			}
+			else{
+				Assert.assertTrue("Element: '" + elementName + " not found", false);
+			}
 		}
+		
 		return found;
 	}
 	

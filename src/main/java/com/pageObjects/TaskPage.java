@@ -44,13 +44,12 @@ public class TaskPage extends AbstractPageDriver{
 	}
 	
 	public void keyboardEventToAddTask(String key){
-		switch (key) {
-		case "ENTER":
+		
+		if (key.equals("ENTER")){
 			getUniqueElement(taskName_txt).sendKeys(Keys.ENTER);
-			break;
-		default:
+		}
+		else{
 			Assert.assertTrue("Key '" + key + "' is not a valid KEY", false);
-			break;
 		}
 	}
 	

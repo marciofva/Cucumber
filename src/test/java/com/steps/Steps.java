@@ -73,8 +73,8 @@ public class Steps{
 
 		currentDir = System.getProperty("user.dir");
 
-		PropertyFileReader();
-
+		PropertyFileReader();	
+	
 		switch (browser.toLowerCase()) {
 		case "chrome":
 			chromeDriverLocation = currentDir + "/src/main/resources/drivers/chromedriver.exe";
